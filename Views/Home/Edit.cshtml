@@ -1,0 +1,46 @@
+﻿@model TemplatedHTMLHelper.Models.Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div>
+        @Html.DisplayName("Id")-@Html.Editor("Id")
+
+        <br />
+        <br />
+        @Html.DisplayNameFor(x => x.Email)-@Html.EditorFor(x => x.Email)
+
+        <br />
+        <br />
+        @Html.DisplayNameFor(x => x.DateOfBirth)-@Html.EditorFor(x => x.DateOfBirth)
+
+        <br />
+        <br />
+        @Html.DisplayNameFor(x => x.isOnline)-@Html.EditorFor(x => x.isOnline)
+
+        <br />
+        <br />
+        @Html.DisplayNameFor(x => x.BirthTime)-@Html.EditorFor(x => x.BirthTime)
+
+        <br />
+        <br />
+        <hr />
+        @using (Html.BeginForm("myForm"))
+        {
+            @Html.EditorForModel()
+
+            <input type="submit" value="Press me"/>
+        }
+
+
+        <br /><hr />
+        <hr />
+
+    </div>
+</body>
+</html>
